@@ -95,7 +95,7 @@ export default function HomePage() {
           {/* Testimonial 1 */}
           <div className="w-full sm:w-[300px] bg-white rounded-lg shadow p-6">
             <p className="text-gray-700 mb-4">
-              "ShareBite has helped us redirect thousands of pounds of quality food to people who need it."
+              &quot;ShareBite has helped us redirect thousands of pounds of quality food to people who need it.&quot;
             </p>
             <div className="font-semibold text-green-700">Kanchan Yadav</div>
             <div className="text-sm text-gray-500">Student, LTCE</div>
@@ -104,7 +104,7 @@ export default function HomePage() {
           {/* Testimonial 2 */}
           <div className="w-full sm:w-[300px] bg-white rounded-lg shadow p-6">
             <p className="text-gray-700 mb-4">
-              "Before this platform, we struggled to find consistent food sources. Now we can feed more people."
+              &quot;Before this platform, we struggled to find consistent food sources. Now we can feed more people.&quot;
             </p>
             <div className="font-semibold text-green-700">Tarannum Shah</div>
             <div className="text-sm text-gray-500">Student, LTCE</div>
@@ -113,7 +113,7 @@ export default function HomePage() {
           {/* Testimonial 3 */}
           <div className="w-full sm:w-[300px] bg-white rounded-lg shadow p-6">
             <p className="text-gray-700 mb-4">
-              "As a volunteer, I love being able to see exactly where my help is needed and make an impact."
+              &quot;As a volunteer, I love being able to see exactly where my help is needed and make an impact.&quot;
             </p>
             <div className="font-semibold text-green-700">Sahil Singh</div>
             <div className="text-sm text-gray-500">Student, LTCE</div>

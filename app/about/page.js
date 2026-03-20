@@ -73,7 +73,7 @@ export default function AboutPage() {
             {/* CTA Section */}
             <section className="py-20 px-6 md:px-20 bg-green-600 text-white text-center rounded-t-3xl">
                 <h3 className="text-4xl font-bold mb-6">Be Part of the Solution</h3>
-                <p className="text-lg mb-8 max-w-2xl mx-auto">Whether you're a restaurant, an individual, or an NGO, you can make a difference. Join ShareBite in our mission to eliminate hunger and food waste.</p>
+                <p className="text-lg mb-8 max-w-2xl mx-auto">Whether you&apos;re a restaurant, an individual, or an NGO, you can make a difference. Join ShareBite in our mission to eliminate hunger and food waste.</p>
                 <div className="flex justify-center gap-4">
                     <a href="/donate" className="bg-white text-green-600 font-bold px-6 py-3 rounded-full hover:bg-green-100">Donate Now</a>
                     <a href="/join" className="border border-white text-white font-bold px-6 py-3 rounded-full hover:bg-white hover:text-green-600">Join Us</a>

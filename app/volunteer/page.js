@@ -105,7 +105,7 @@ const VolunteerPage = () => {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-extrabold text-green-800 mb-4 tracking-tight">Meet Our Volunteers</h2>
-          <p className="text-gray-600 text-lg">These amazing individuals have offered their time to help us serve the community. Click 'Hire' to engage them for your cause.</p>
+          <p className="text-gray-600 text-lg">These amazing individuals have offered their time to help us serve the community. Click &apos;Hire&apos; to engage them for your cause.</p>
         </div>
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -255,7 +255,7 @@ const VolunteerPage = () => {
             }
           ].map(({ text, author, role }, i) => (
             <div key={i} className="bg-green-50 p-6 rounded-lg shadow">
-              <p className="text-gray-700 italic mb-4">"{text}"</p>
+              <p className="text-gray-700 italic mb-4">&quot;{text}&quot;</p>
               <div className="text-green-800 font-semibold">{author}</div>
               <div className="text-sm text-gray-500">{role}</div>
             </div>
@@ -266,7 +266,7 @@ const VolunteerPage = () => {
       {/* CTA */}
       <section className="bg-green-600 text-white text-center py-16 px-4" id="signup">
         <h2 className="text-3xl font-bold mb-4">Ready to Make a Difference?</h2>
-        <p className="max-w-2xl mx-auto mb-6">Join our network of volunteers helping to rescue food and fight hunger in your community. No experience necessary - we'll provide all the training you need.</p>
+        <p className="max-w-2xl mx-auto mb-6">Join our network of volunteers helping to rescue food and fight hunger in your community. No experience necessary - we&apos;ll provide all the training you need.</p>
         <Link href="/signup" className="inline-block bg-white text-green-700 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
           Become a Volunteer
         </Link>
