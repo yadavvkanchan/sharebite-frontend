@@ -1,10 +1,10 @@
 'use client';
 
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
-export default function GardenPage() {
+function GardenContent() {
   const searchParams = useSearchParams();
   const [count, setCount] = useState(0);
 
@@ -14,13 +14,15 @@ export default function GardenPage() {
 
   useEffect(() => {
     const urlCount = parseInt(searchParams.get('count') || '0');
+
     if (urlCount > 0) {
       setCount(urlCount);
     } else {
-      // Fallback: fetch count from backend
       const userData = localStorage.getItem('userData');
+
       if (userData) {
         const { email } = JSON.parse(userData);
+
         fetch(`https://sharebite-backend-ylpd.onrender.com/api/donations/count/${email}`)
           .then((res) => res.json())
           .then((data) => setCount(data.count || 0))
@@ -32,6 +34,7 @@ export default function GardenPage() {
   const getImageSrc = (index) => {
     const row = Math.floor(index / cols);
     const col = index % cols;
+
     return index < count
       ? `/tree-puzzle/color/block_${row}_${col}.jpg`
       : `/tree-puzzle/gray/block_${row}_${col}.jpg`;
@@ -39,7 +42,9 @@ export default function GardenPage() {
 
   return (
     <div className="min-h-screen bg-green-100 flex flex-col items-center justify-center py-10">
-      <h1 className="text-3xl font-bold text-green-700 mb-8">🌳 Your Donation Garden</h1>
+      <h1 className="text-3xl font-bold text-green-700 mb-8">
+        🌳 Your Donation Garden
+      </h1>
 
       <div
         className="grid gap-1 border-4 border-green-600 rounded"
@@ -61,5 +66,13 @@ export default function GardenPage() {
         You’ve donated <strong>{count}</strong> time(s). Keep going to reveal the full tree!
       </p>
     </div>
+  );
+}
+
+export default function GardenPage() {
+  return (
+    <Suspense fallback={<div className="p-10 text-xl">Loading Garden...</div>}>
+      <GardenContent />
+    </Suspense>
   );
 }
